@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<base target="_blank">
+		<title>Radio Day 2018</title>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script type="text/javascript">
+    	ymaps.ready(init);
+      var myMap, myPlacemark;
+
+      function init(){
+      	myMap = new ymaps.Map("map", {
+        	center: [54.612724, 39.735178],
+          zoom: 17
+        });
+
+        myPlacemark = new ymaps.Placemark([54.612724, 39.735178], {
+        	hintContent: 'ЦПКиО',
+          balloonContent: 'Место проведения праздника "День Радио"'
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/skeleton.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower">
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 align="center">Горячие шашлыки с друзьями!</h1>
+			<h3>Дата: 7 мая 2018</h3>
+			<h3>Время: 15:00</h3>
+			<h3>Место: г. Рязань, ЦПКиО, Зеленый театр</h3>
+			<div class="row">
+				<div class="six columns">
+					<div class="photo_a photo_b">
+						<img src="radik.jpg" alt="[Шашлыки!]" class="u-max-full-width">
+					</div>
+					<p align="center">А мы возьмем гитару и пойдем на речку! Выступают все! Приводите друзей, будет весело!<br>
+					<em>P.S.</em> И не забудьте собрать с козеров по 200 руб.</p>
+					<p align="center">
+            <!--a href="http://www.rsreu.ru" class="button">Я пойду!</a-->
+						<a href="https://vk.com/tspkio_62" class="button">Я пойду!</a>
+						</p>
+				</div>
+				<div class="six columns">
+					<p id="map" style="width: 700px; height: 400px" class="u-max-full-width"></p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p align="center">&copy; ncsergey 2017г.</p>
+		</footer>
+	</body>
+</html>
